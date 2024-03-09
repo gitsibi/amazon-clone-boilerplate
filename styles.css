@@ -7,6 +7,17 @@ body {
   margin: 0;
 }
 
+.back-ground
+{
+    background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .header {
   background-color: rgb(19, 25, 33);
   height: 60px;
@@ -42,10 +53,12 @@ body {
 .logo {
   width: 120px;
   height: 50px;
-  background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
+  /* background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png'); */
   background-repeat: no-repeat;
-  background-position-y: -40px;
+  background-position-y: 800px;
+  /* background-position-x:800px; */
   overflow: hidden;
+  /* background-size: contain; */
 }
 
 .dotin {
@@ -102,7 +115,7 @@ body {
 }
 
 .search-container:hover {
-  outline: 3px solid orange;
+  outline: 3px ;
 }
 
 .search-select {
@@ -186,10 +199,6 @@ body {
   font-size: 1.1rem;
   display: flex;
 }
-
-/* .cart-container i {
-  font-size: 1rem;
-} */
 
 /**************************************navigation*****************************************/
 .nav {
@@ -357,26 +366,197 @@ body {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 600px) {
-    .search-container {
-      background-color:aqua;
-    }
-  
-    .nav
-    {
-      background-color: violet;
-    }
-    .card-product
-    {
-      background-color:aqua;
-    }
-  }
-  
-  @media screen and (min-width: 700px) and (max-width: 1024px) {
-    .return-order-container
-    {
-      color:blue;
-    }
+/* Add these media queries at the end of your existing CSS */
+
+/* For tablets (landscape) and smaller */
+@media only screen and (max-width: 1024px) {
+
+  .back-ground
+{
+    background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+  .container-header {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  
+  .header {
+    height: auto;
+  }
+
+  .logo-container {
+    margin-bottom: 20px;
+  }
+
+  .address-container,
+  .search-container,
+  .language-container,
+  .login-container,
+  .return-order-container,
+  .cart-container {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .nav {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .container-nav {
+    flex-direction: column;
+  }
+
+  .container-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-lion,
+  .nav-prime {
+    margin-bottom: 20px;
+  }
+
+  .main {
+    top: 0;
+  }
+
+  .card-product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-product {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-item {
+    height: auto;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+
+  .back-ground
+{
+    background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+  .container-nav ul li {
+    padding: 5px 0;
+  }
+
+  .card-product-nested-card {
+    justify-content: center;
+  }
+
+  .card-nested {
+    width: 45%;
+  }
+
+  .card-nested img {
+    width: 100%;
+    height: auto;
+  }
+
+  .last-col {
+    padding: 20px;
+  }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+  /* Adjustments for the header */
+  .header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .container-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .address-container,
+  .search-container,
+  .language-container,
+  .login-container,
+  .return-order-container,
+  .cart-container {
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  /* Adjustments for the navigation */
+  .container-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-nav ul li {
+    padding: 5px 0;
+  }
+
+  /* Adjustments for the product cards */
+  .card-product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-product {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card-nested {
+    width: 100%;
+  }
+
+  .card-nested img {
+    width: 100%;
+    height: auto;
+  }
+
+  .last-col {
+    padding: 20px;
+  }
+}
+
